@@ -249,10 +249,9 @@ public class RedirectMapModel {
 
     List<MapEntry> entries = this.gatherEntries(config,0);
 
-    sb.append("\n# Dynamic entries for " + config.getResource().getPath() + "\n");
     for (MapEntry entry : entries) {
       if (entry.isValid()) {
-        sb.append(entry.getSource() + " " + entry.getTarget() + "\n");
+        sb.append(entry.getSource() + "," + entry.getTarget() + "\n");
       }
     }
   }
